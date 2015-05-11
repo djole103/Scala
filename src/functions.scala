@@ -6,6 +6,6 @@ object Timer {
 		println("time flies like an arrow...")
 	}
 	def main(args: Array[String]) {
-		oncePerSecond(timeFlies)
+		oncePerSecond(() => println("time flies like an arrowww"))
 	}
 }
