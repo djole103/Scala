@@ -15,4 +15,3 @@ object Solution2 {
         (1 to n).map(i => readLine.split(" ").map(_.toInt).sum).foreach(println)
     }
 }
-
