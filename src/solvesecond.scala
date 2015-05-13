@@ -1,15 +1,18 @@
 object Solution {
-
     def main(args: Array[String]) {
-        var str = io.Source.stdin.getLines().take(1).map(_.toString)
-        println(str.getClass())
-        str = str.map(_.toInt)
-        str = str.sum()
-            //  str.foreach {println}
-      //  val T : Int = io.Source.stdin.getLines().take(1).map(_.toInt)
-      //  for(a <- 1 to T){
-       //     println(io.Source.stdin.getLines().take(1).parse(' ').map(_.toInt).sum())
-      //  }            
+        val n = readInt()
+        for (i <- 1 to n) {
+            var nums = readLine.split(" ")
+            var num  = nums(0).toInt + nums(1).toInt
+            println(num)
+        }
+    }
+}
+
+object Solution2 {
+    def main(args: Array[String]): Unit = {
+        val n = readInt()
+        (1 to n).map(i => readLine.split(" ").map(_.toInt).sum).foreach(println)
     }
 }
 
