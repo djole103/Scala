@@ -22,3 +22,19 @@ object UtopianTree {
         return height
     }
 }
+
+object UtopianTree2 {
+
+    def main(args: Array[String]) {
+        val tests : Int = readInt()
+        (1 to tests).foreach{
+		_ =>
+		 val cycles : Int = readInt()
+		 val res = (1 to cycles).foldLeft(1) {
+			case(acc, cycle) => if(cycle % 2 ==1) acc * 2 else acc+1
+		}
+		println(res)
+        }
+    }
+}
+
