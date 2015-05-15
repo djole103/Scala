@@ -9,17 +9,16 @@ object UtopianTree {
         }
     }
     
-    def cycleLoop(cycles : Int){
+    def cycleLoop(cycles : Int) : Int ={
         var cyc : Int = cycles
         var height : Int = 1
         while(cyc>0){
                 height = height *2
-                println(height)
                 cyc = cyc -1
-                if(cyc>0) height= height +1
-                else height
+                if(cyc>0) height = height +1
+                else return height
                 cyc = cyc -1
         }
-        height
+        return height
     }
 }
