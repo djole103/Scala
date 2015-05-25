@@ -42,5 +42,11 @@ object Main {
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = {
+	//have a "count" which is the money you've chosen so far
+	//for each coin (use it as a base, like a first choice)
+	//pass it to a function adding that val to count more possibilities
+	// eg. list.map(count + _ , list, valGoal)
+	//return when you equal the value, if it goes over it doesn't count
+  }
 }
