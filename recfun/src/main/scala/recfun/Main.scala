@@ -48,5 +48,10 @@ object Main {
 	//pass it to a function adding that val to count more possibilities
 	// eg. list.map(count + _ , list, valGoal)
 	//return when you equal the value, if it goes over it doesn't count
+
+	//V2 NEW PLAN
+	//pass in coins and money, try all possibilities in coins reducing "money" to 0
+	//make list of lists then use List().distinct to count how many ways
+	def loop(money: Int, coins: List[Int],
   }
 }
