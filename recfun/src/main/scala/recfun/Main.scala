@@ -52,6 +52,15 @@ object Main {
 	//V2 NEW PLAN
 	//pass in coins and money, try all possibilities in coins reducing "money" to 0
 	//make list of lists then use List().distinct to count how many ways
-	def loop(money: Int, coins: List[Int],
+
+	//UPDATE3 problem with this is that it does permutations and not combinations
+	def loop(money: Int, coins: List[Int]): Int = {
+		count = 0
+		for(coin<-coins):
+			if money-coin==0 count=count+1
+			else if money-coin>0 count=count + loop(money-coin,coins)
+			else pass
+		count
+	}
   }
 }
