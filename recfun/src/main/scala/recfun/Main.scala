@@ -26,13 +26,13 @@ object Main {
   def balance(chars: List[Char]): Boolean = {
 	count = 0
 	def loop(chars: List[Char],count: Int) : Boolean = {
-		if chars.isEmpty && count==0 True 
-		elif chars.head == '(' loop(chars.tail,count+1)
-		elif chars.head == ')' closedB(chars, count-1)
+		if (chars.isEmpty && count==0) True 
+		else if (chars.head == '(') loop(chars.tail,count+1)
+		else if (chars.head == ')') closedB(chars, count-1)
 		else loop(chars.tail,count)
 	}
 	def closedB(chars: List[Char], count: Int) : Boolean = {
-		if count<0 False
+		if (count<0) False
 		else loop(chars.tail,count)
 	}
 	loop(chars,count)
@@ -56,10 +56,10 @@ object Main {
 	//UPDATE3 problem with this is that it does permutations and not combinations
 	def loop(money: Int, coins: List[Int]): Int = {
 		count = 0
-		for(coin<-coins):
-			if money-coin==0 count=count+1
-			else if money-coin>0 count=count + loop(money-coin,coins)
-			else pass
+		for(coin <- coins){
+			if (money-coin==0) count=count+1
+			else if(money-coin>0) count=count + loop(money-coin,coins)
+			else pass }
 		count
 	}
   }
